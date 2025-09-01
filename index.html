@@ -3,104 +3,863 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Banka Manikanth - Portfolio</title>
+    <title>Manikanth Banka - Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Harlow+Solid+Italic&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Banka Manikanth</h1>
-    <p><span id="typed-role"></span></p>
-    <p id="clock"></p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-      <button id="theme-toggle">🌙 Dark Mode</button>
-    </nav>
-  </header>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <img src="logo.png" alt="MB Logo" class="logo-image">
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#about"><i class="fas fa-user"></i> About</a></li>
+        <li><a href="#projects"><i class="fas fa-briefcase"></i> Projects</a></li>
+        <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
+        <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+      </ul>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I'm a B.Tech CSE graduate with hands-on experience in designing and deploying cloud-native applications,
-      automating CI/CD pipelines, implementing predictive analytics with machine learning, and building tools for digital forensics.
-      <br><br>
-      Through my academic journey, I've worked extensively with AWS services, gaining practical expertise in serverless architecture, DevOps practices, cloud monitoring, and scalable infrastructure design. 
-      I’ve also integrated machine learning models to forecast cloud resource usage and have built secure, investigative tools tailored for cybersecurity applications.
-      <br><br>
-      With a strong foundation in cloud technologies and a problem-solving mindset, I’m now ready to contribute to real-world tech teams in roles related to Cloud Engineering, DevOps, or ML Ops.
-    </p>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="hero-badge">
+          <span>Welcome to my portfolio</span>
+        </div>
+        <h1>Manikanth Banka</h1>
+        <div class="hero-subtitle">
+          <span id="typed-role"></span>
+        </div>
+        <p class="hero-description">
+          Passionate technologist specializing in cloud-native architectures, machine learning solutions, and DevOps automation. Transforming complex challenges into elegant, scalable solutions that drive business innovation.
+        </p>
+        <div class="hero-highlights">
+          <div class="highlight-item">
+            <i class="fas fa-check-circle"></i>
+            <span>7+ Successful Projects</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-check-circle"></i>
+            <span>AWS Certified Solutions</span>
+          </div>
+          <div class="highlight-item">
+            <i class="fas fa-check-circle"></i>
+            <span>AI/ML Expertise</span>
+          </div>
+        </div>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-briefcase"></i>
+            View My Work
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i>
+            Get In Touch
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-cards">
+          <div class="floating-card primary">
+            <i class="fas fa-cogs"></i>
+            <span>DevOps</span>
+            <small>CI/CD & Automation</small>
+          </div>
+          <div class="floating-card secondary">
+            <i class="fas fa-cloud"></i>
+            <span>Cloud Native</span>
+            <small>AWS & Serverless</small>
+          </div>
+          <div class="floating-card tertiary">
+            <i class="fas fa-brain"></i>
+            <span>AI/ML</span>
+            <small>Predictive Analytics</small>
+          </div>
+          <div class="floating-card quaternary">
+            <i class="fas fa-code"></i>
+            <span>Full Stack</span>
+            <small>End-to-End Solutions</small>
+          </div>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-number">7+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">Years</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Cloud Native</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+      <span>Scroll to explore</span>
+    </div>
   </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li>To-Do Application (Serverless using AWS)</li>
-      <li>Advanced Mobile Device Forensics (Digital Scope)</li>
-      <li>Predictive Analytics in Cloud Resource Allocation</li>
-      <li>CI/CD Pipeline Automation for Software Deployment</li>
-    </ul>
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>🌟 My Journey</h2>
+        <div class="section-line"></div>
+        <div class="about-subtitle">
+          <div class="journey-indicator">
+            <span class="journey-dot active"></span>
+            <span class="journey-dot"></span>
+            <span class="journey-dot"></span>
+          </div>
+          <span class="journey-text">Passionate Technologist & Innovator</span>
+        </div>
+      </div>
+      <div class="about-content">
+        <div class="about-text" data-aos="fade-right">
+          <div class="about-intro">
+            <div class="intro-avatar">
+              <div class="avatar-ring"></div>
+              <i class="fas fa-user-astronaut"></i>
+            </div>
+            <div class="intro-content">
+              <h3>Hello! I'm Manikanth Banka</h3>
+              <p>
+                Driven by a deep curiosity for technology and innovation. I specialize in cloud-native applications, machine learning, and DevOps practices, with a strong focus on building scalable, efficient, and future-ready solutions.
+              </p>
+              <p>
+                My journey in technology has led me to gain hands-on experience with AWS services, serverless architectures, CI/CD pipelines, and ML model deployment. I enjoy bridging the gap between traditional development and modern cloud-first approaches, while exploring the potential of predictive analytics and automation to solve real-world challenges.
+              </p>
+            </div>
+          </div>
+          <div class="education-section" data-aos="fade-up" data-aos-delay="200">
+            <div class="section-title">
+              <h3>🎓 Academic Journey</h3>
+              <div class="title-decoration">
+                <span class="decoration-line"></span>
+                <i class="fas fa-graduation-cap"></i>
+                <span class="decoration-line"></span>
+              </div>
+            </div>
+            <div class="education-timeline">
+              <div class="education-item">
+                <div class="education-marker">
+                  <div class="marker-dot"></div>
+                  <div class="marker-line"></div>
+                </div>
+                <div class="education-card">
+                  <div class="education-header">
+                    <div class="education-icon">
+                      <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-badge">Completed</div>
+                  </div>
+                  <div class="education-details">
+                    <h4>Bachelor of Technology in Computer Science Engineering</h4>
+                    <p class="institution">Nalla Narasimha Reddy Education Society's Group of Institutions</p>
+                    <p class="location">Hyderabad, India</p>
+                    <p class="year">2021 - 2025</p>
+                  </div>
+                </div>
+              </div>
+              <div class="education-item">
+                <div class="education-marker">
+                  <div class="marker-dot"></div>
+                  <div class="marker-line"></div>
+                </div>
+                <div class="education-card">
+                  <div class="education-header">
+                    <div class="education-icon">
+                      <i class="fas fa-book"></i>
+                    </div>
+                    <div class="education-badge">Completed</div>
+                  </div>
+                  <div class="education-details">
+                    <h4>Intermediate (12th Standard) - MPC</h4>
+                    <p class="institution">Narayana Junior College</p>
+                    <p class="location">Hyderabad, India</p>
+                    <p class="year">2019 - 2021</p>
+                  </div>
+                </div>
+              </div>
+              <div class="education-item">
+                <div class="education-marker">
+                  <div class="marker-dot"></div>
+                </div>
+                <div class="education-card">
+                  <div class="education-header">
+                    <div class="education-icon">
+                      <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-badge">Completed</div>
+                  </div>
+                  <div class="education-details">
+                    <h4>Secondary School (10th Standard)</h4>
+                    <p class="institution">Sacred Heart High School</p>
+                    <p class="location">Godavarikhani, Peddapalli District, India</p>
+                    <p class="year">2019</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="certificates-section" data-aos="fade-up" data-aos-delay="400">
+            <div class="section-title">
+              <h3>🏆 Achievements & Certifications</h3>
+              <div class="title-decoration">
+                <span class="decoration-line"></span>
+                <i class="fas fa-trophy"></i>
+                <span class="decoration-line"></span>
+              </div>
+            </div>
+            <div class="certificates-grid">
+              <div class="certificate-card">
+                <div class="certificate-header">
+                  <div class="certificate-icon">
+                    <i class="fas fa-cloud"></i>
+                  </div>
+                  <div class="certificate-badge">Grade A</div>
+                </div>
+                <div class="certificate-details">
+                  <h4>Certificate Course on Cloud</h4>
+                  <p class="issuer">Honeywell, ICT Academy</p>
+                  <div class="certificate-progress">
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 95%"></div>
+                    </div>
+                    <span>95% Excellence</span>
+                  </div>
+                </div>
+              </div>
+              <div class="certificate-card">
+                <div class="certificate-header">
+                  <div class="certificate-icon">
+                    <i class="fab fa-java"></i>
+                  </div>
+                  <div class="certificate-badge">Online</div>
+                </div>
+                <div class="certificate-details">
+                  <h4>Java Online Certification</h4>
+                  <p class="issuer">Frontlines Edutech</p>
+                  <div class="certificate-progress">
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 88%"></div>
+                    </div>
+                    <span>88% Completion</span>
+                  </div>
+                </div>
+              </div>
+              <div class="certificate-card">
+                <div class="certificate-header">
+                  <div class="certificate-icon">
+                    <i class="fas fa-robot"></i>
+                  </div>
+                  <div class="certificate-badge">Workshop</div>
+                </div>
+                <div class="certificate-details">
+                  <h4>National Workshop on Haptic Robotics</h4>
+                  <p class="issuer">Robokart, JNTUH</p>
+                  <div class="certificate-progress">
+                    <div class="progress-bar">
+                      <div class="progress-fill" style="width: 100%"></div>
+                    </div>
+                    <span>100% Completed</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>HTML, CSS, JavaScript</li>
-      <li>Git & GitHub, CI/CD, GitHub Actions</li>
-      <li>AWS Lambda, DynamoDB, API Gateway</li>
-      <li>Machine Learning (LSTM, ARIMA), Python</li>
-      <li>Cloud Monitoring (CloudWatch, Auto Scaling)</li>
-      <li>Digital Forensics & Cybersecurity Tools</li>
-    </ul>
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>🚀 Featured Projects</h2>
+        <div class="section-line"></div>
+        <div class="projects-subtitle">
+          <span class="typing-text">Discover my latest innovations</span>
+          <div class="sparkle-container">
+            <i class="fas fa-star sparkle"></i>
+            <i class="fas fa-star sparkle"></i>
+            <i class="fas fa-star sparkle"></i>
+          </div>
+        </div>
+      </div>
+      <div class="projects-timeline">
+        
+        <div class="project-item" data-aos="fade-up">
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">AI/ML</span>
+              <span class="project-year">2025</span>
+              <div class="project-badge">
+                <i class="fas fa-fire"></i> Hot
+              </div>
+            </div>
+            <h3>Predictive Cloud Resource Allocation</h3>
+            <p>AI-driven forecasting system that optimizes cloud resources by predicting workload demands and automating resource adjustments in real-time.</p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Machine Learning</span>
+              <span>AWS</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Manikanth1707/Predictive-Cloud-Resource-Allocation-with_AI" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Project
+              </a>
+              <div class="learn-more-section">
+                <span class="learn-more-text">Want to know more about this project?</span>
+                <a href="projects/predictive-cloud-resource.html" class="project-link learn-more-btn">
+                  <i class="fas fa-info-circle"></i> Click Here
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual">
+            <i class="fas fa-chart-line"></i>
+          </div>
+        </div>
+
+        <div class="project-item reverse" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">AI/ML</span>
+              <span class="project-year">2025</span>
+              <div class="project-badge">
+                <i class="fas fa-rocket"></i> Trending
+              </div>
+            </div>
+            <h3>XAI Loan Default Chatbot</h3>
+            <p>Streamlit web application that predicts loan default risk using ML models with interpretable insights via SHAP analysis.</p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Streamlit</span>
+              <span>SHAP</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Manikanth1707/XAI_loan_default_chatbot" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Project
+              </a>
+              <div class="learn-more-section">
+                <span class="learn-more-text">Want to know more about this project?</span>
+                <a href="projects/xai-loan-chatbot.html" class="project-link learn-more-btn">
+                  <i class="fas fa-info-circle"></i> Click Here
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual">
+            <i class="fas fa-robot"></i>
+          </div>
+        </div>
+
+        <div class="project-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">Full Stack</span>
+              <span class="project-year">2025</span>
+              <div class="project-badge">
+                <i class="fas fa-heart"></i> Popular
+              </div>
+            </div>
+            <h3>Smart Clinic Booking System</h3>
+            <p>Full-stack clinic appointment booking system with responsive UI/UX and AWS backend for email notifications.</p>
+            <div class="project-tech">
+              <span>HTML/CSS/JS</span>
+              <span>AWS Lambda</span>
+              <span>API Gateway</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Manikanth1707/smart-clinic-booking" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Project
+              </a>
+              <div class="learn-more-section">
+                <span class="learn-more-text">Want to know more about this project?</span>
+                <a href="projects/smart-clinic-booking.html" class="project-link learn-more-btn">
+                  <i class="fas fa-info-circle"></i> Click Here
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual">
+            <i class="fas fa-hospital"></i>
+          </div>
+        </div>
+
+        <div class="project-item reverse" data-aos="fade-up" data-aos-delay="300">
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">Web Dev</span>
+              <span class="project-year">2025</span>
+              <div class="project-badge">
+                <i class="fas fa-code"></i> Clean
+              </div>
+            </div>
+            <h3>GitHub Explorer</h3>
+            <p>Explore and analyze GitHub profiles and repositories with search, comparison, and insights functionality.</p>
+            <div class="project-tech">
+              <span>JavaScript</span>
+              <span>GitHub API</span>
+              <span>Web Development</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Manikanth1707/GITHUB-EXPLORER" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Project
+              </a>
+              <div class="learn-more-section">
+                <span class="learn-more-text">Want to know more about this project?</span>
+                <a href="projects/github-explorer.html" class="project-link learn-more-btn">
+                  <i class="fas fa-info-circle"></i> Click Here
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual">
+            <i class="fab fa-github"></i>
+          </div>
+        </div>
+
+        <div class="project-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">Cloud</span>
+              <span class="project-year">2024</span>
+              <div class="project-badge">
+                <i class="fas fa-bolt"></i> Fast
+              </div>
+            </div>
+            <h3>Serverless ToDo Application</h3>
+            <p>A serverless ToDo application built with AWS Lambda, API Gateway, and DynamoDB with real-time usage logging.</p>
+            <div class="project-tech">
+              <span>AWS Lambda</span>
+              <span>DynamoDB</span>
+              <span>Serverless</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Manikanth1707/Servelss-Application-using-Cloud" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Project
+              </a>
+              <div class="learn-more-section">
+                <span class="learn-more-text">Want to know more about this project?</span>
+                <a href="projects/serverless-todo.html" class="project-link learn-more-btn">
+                  <i class="fas fa-info-circle"></i> Click Here
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual">
+            <i class="fas fa-cloud"></i>
+          </div>
+        </div>
+
+        <div class="project-item reverse" data-aos="fade-up" data-aos-delay="500">
+          <div class="project-content">
+            <div class="project-meta">
+              <span class="project-category">DevOps</span>
+              <span class="project-year">2025</span>
+              <div class="project-badge">
+                <i class="fas fa-cogs"></i> Robust
+              </div>
+            </div>
+            <h3>CI/CD Pipeline Project</h3>
+            <p>Automated CI/CD pipeline implementation for software deployment with modern DevOps practices.</p>
+            <div class="project-tech">
+              <span>CI/CD</span>
+              <span>DevOps</span>
+              <span>Automation</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/Manikanth1707/CI-CD_project" target="_blank" class="project-link">
+                <i class="fab fa-github"></i> View Project
+              </a>
+              <div class="learn-more-section">
+                <span class="learn-more-text">Want to know more about this project?</span>
+                <a href="projects/ci-cd-project.html" class="project-link learn-more-btn">
+                  <i class="fas fa-info-circle"></i> Click Here
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-visual">
+            <i class="fas fa-cogs"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: Manikanthbanka17@gmail.com</p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/manikanth-banka" target="_blank">linkedin.com/in/manikanth-banka</a></p>
-    <p>GitHub: <a href="https://github.com/Manikanth1707" target="_blank">github.com/Manikanth1707</a></p>
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2>Technical Expertise</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-icon">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Programming</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">Python</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">JavaScript</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">HTML/CSS</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-icon">
+            <i class="fas fa-cloud"></i>
+          </div>
+          <h3>Cloud & DevOps</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">AWS Lambda</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">DynamoDB</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 82%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">CI/CD</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>Machine Learning</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">Predictive Analytics</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 87%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">SHAP</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Streamlit</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-icon">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>Tools & Technologies</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">Git & GitHub</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">GitHub API</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">AWS SES</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 78%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <h3>Web Development</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">React.js</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">REST APIs</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Serverless Web Apps</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-icon">
+            <i class="fas fa-chart-bar"></i>
+          </div>
+          <h3>Data & Analytics</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <span class="skill-name">Data Visualization</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Data Processing</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <span class="skill-name">Model Deployment</span>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 83%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Banka Manikanth. All rights reserved.</p>
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2 class="connect-title">
+          <span class="title-word title-word-1">Let's</span>
+          <span class="title-word title-word-2">Connect</span>
+          <span class="title-word title-word-3">✨</span>
+        </h2>
+        <div class="section-line connect-line"></div>
+        <div class="connect-subtitle">
+          <span class="typing-text" id="connect-typed"></span>
+        </div>
+      </div>
+      <div class="contact-content">
+        <div class="contact-info">
+          <div class="contact-item" data-aos="fade-right" data-aos-delay="100">
+            <div class="contact-icon email-icon">
+              <i class="fas fa-envelope"></i>
+              <div class="icon-glow"></div>
+            </div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <a href="mailto:Manikanthbanka17@gmail.com" class="contact-link">
+                <span class="link-text">Manikanthbanka17@gmail.com</span>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+          </div>
+          <div class="contact-item" data-aos="fade-right" data-aos-delay="200">
+            <div class="contact-icon linkedin-icon">
+              <i class="fab fa-linkedin"></i>
+              <div class="icon-glow"></div>
+            </div>
+            <div class="contact-details">
+              <h4>LinkedIn</h4>
+              <a href="https://www.linkedin.com/in/manikanth-banka" target="_blank" class="contact-link">
+                <span class="link-text">linkedin.com/in/manikanth-banka</span>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+          </div>
+          <div class="contact-item" data-aos="fade-right" data-aos-delay="300">
+            <div class="contact-icon github-icon">
+              <i class="fab fa-github"></i>
+              <div class="icon-glow"></div>
+            </div>
+            <div class="contact-details">
+              <h4>GitHub</h4>
+              <a href="https://github.com/Manikanth1707" target="_blank" class="contact-link">
+                <span class="link-text">github.com/Manikanth1707</span>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+          </div>
+          <div class="contact-item" data-aos="fade-right" data-aos-delay="400">
+            <div class="contact-icon instagram-icon">
+              <i class="fab fa-instagram"></i>
+              <div class="icon-glow"></div>
+            </div>
+            <div class="contact-details">
+              <h4>Instagram</h4>
+              <a href="https://www.instagram.com/manikanth_banka/" target="_blank" class="contact-link">
+                <span class="link-text">instagram.com/manikanth_banka</span>
+                <span class="link-arrow">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-visual" data-aos="fade-left" data-aos-delay="500">
+          <div class="contact-card">
+            <div class="card-glow"></div>
+            <div class="card-content">
+              <div class="card-icon">
+                <i class="fas fa-rocket"></i>
+                <div class="rocket-trail"></div>
+              </div>
+              <h3>Ready to collaborate?</h3>
+              <p>Let's build something amazing together</p>
+              <div class="collaboration-stats">
+                <div class="stat">
+                  <span class="stat-number">🚀</span>
+                  <span class="stat-label">Innovation</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">⚡</span>
+                  <span class="stat-label">Speed</span>
+                </div>
+                <div class="stat">
+                  <span class="stat-number">🎯</span>
+                  <span class="stat-label">Precision</span>
+                </div>
+              </div>
+            </div>
+            <div class="floating-elements">
+              <div class="floating-dot dot-1"></div>
+              <div class="floating-dot dot-2"></div>
+              <div class="floating-dot dot-3"></div>
+              <div class="floating-dot dot-4"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Banka Manikanth. Crafted with passion.</p>
+    </div>
   </footer>
 
-  <button id="scrollToTopBtn" title="Go to top">↑</button>
-
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      offset: 100
+    });
+
     // Typing effect
     new Typed('#typed-role', {
-      strings: ["Fresher", "Web Developer", "Cloud Enthusiast", "ML Ops Learner"],
+      strings: ["Cloud Engineer", "ML Ops Developer", "DevOps Engineer", "Full-Stack Developer"],
       typeSpeed: 60,
       backSpeed: 40,
       loop: true
     });
 
-    // Clock
-    function updateClock() {
-      const clock = document.getElementById("clock");
-      const now = new Date();
-      clock.innerText = now.toLocaleTimeString();
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
-
-    // Theme toggle
-    const toggleBtn = document.getElementById('theme-toggle');
-    toggleBtn.addEventListener('click', () => {
-      document.body.classList.toggle('dark-mode');
-      toggleBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️ Light Mode' : '🌙 Dark Mode';
+    // Contact section typing effect
+    new Typed('#connect-typed', {
+      strings: ["Ready to collaborate?", "Let's build something amazing!", "Open for opportunities!", "Always excited to connect!"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      loop: true
     });
 
-    // Scroll to top
-    const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-    window.addEventListener('scroll', () => {
-      scrollToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+    // Mobile menu
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('.nav-menu');
+    
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
     });
-    scrollToTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.project-item, .skill-category, .contact-item').forEach(el => {
+      observer.observe(el);
     });
   </script>
 </body>

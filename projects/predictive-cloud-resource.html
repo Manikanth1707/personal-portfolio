@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictive Cloud Resource Allocation - Manikanth Banka</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        .project-detail {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            color: white;
+        }
+        
+        .project-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+        
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .project-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .project-description {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-description h2 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .project-description p {
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            color: var(--text-color);
+        }
+        
+        .tech-stack {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            height: fit-content;
+        }
+        
+        .tech-stack h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tech-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+        .features-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .features-list li {
+            padding: 0.5rem 0;
+            color: var(--text-color);
+            position: relative;
+            padding-left: 2rem;
+        }
+        
+        .features-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+        
+        .project-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .project-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.4);
+        }
+        
+        .back-btn {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            background: var(--card-bg);
+            color: var(--text-color);
+            padding: 1rem;
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .back-btn:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        @media (max-width: 768px) {
+            .project-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .project-header h1 {
+                font-size: 2rem;
+            }
+            
+            .project-meta {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="../index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+    
+    <div class="project-detail">
+        <div class="project-header">
+            <h1>Predictive Cloud Resource Allocation</h1>
+            <p>AI-driven cloud management platform with predictive analytics</p>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>Created: August 2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-code"></i>
+                    <span>Language: Python</span>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="project-content">
+            <div class="project-description">
+                <h2>Project Overview</h2>
+                <p>An enterprise-grade cloud management platform with AI-powered intelligence that evolved from a basic cost calculator into a comprehensive cloud resource optimization system. The platform uses predictive analytics to optimize cloud resources, ensuring cost efficiency, scalability, and performance.</p>
+                
+                <p>The system predicts workload demands and automates resource adjustments in real-time, making it an essential tool for modern cloud infrastructure management.</p>
+                
+                <h2>Key Features</h2>
+                <ul class="features-list">
+                    <li>AI-powered resource demand forecasting</li>
+                    <li>Automated resource scaling and optimization</li>
+                    <li>Real-time cost monitoring and analysis</li>
+                    <li>Predictive analytics for workload patterns</li>
+                    <li>Multi-cloud support and management</li>
+                    <li>Automated cost optimization recommendations</li>
+                    <li>Performance monitoring and alerting</li>
+                    <li>Resource utilization analytics</li>
+                </ul>
+                
+                <h2>Technical Implementation</h2>
+                <p>The platform leverages machine learning algorithms to analyze historical usage patterns and predict future resource requirements. It integrates with major cloud providers' APIs to provide real-time monitoring and automated resource management.</p>
+                
+                <p>Key technical components include:</p>
+                <ul class="features-list">
+                    <li>Machine learning models for demand prediction</li>
+                    <li>Cloud provider API integrations</li>
+                    <li>Real-time data processing pipelines</li>
+                    <li>Automated scaling algorithms</li>
+                    <li>Cost optimization algorithms</li>
+                    <li>Performance monitoring systems</li>
+                </ul>
+                
+                <h2>Business Impact</h2>
+                <p>This solution helps organizations reduce cloud costs by up to 40% while improving performance and reliability. The predictive capabilities ensure optimal resource allocation, preventing both over-provisioning and under-provisioning scenarios.</p>
+            </div>
+            
+            <div class="tech-stack">
+                <h3>Technology Stack</h3>
+                <div class="tech-list">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">AWS APIs</span>
+                    <span class="tech-tag">Azure APIs</span>
+                    <span class="tech-tag">Google Cloud</span>
+                    <span class="tech-tag">Predictive Analytics</span>
+                    <span class="tech-tag">Data Science</span>
+                    <span class="tech-tag">Cloud Computing</span>
+                </div>
+                
+
+            </div>
+        </div>
+        
+        <div class="project-links">
+            <a href="https://github.com/Manikanth1707/Predictive-Cloud-Resource-Allocation-with_AI" class="project-btn" target="_blank">
+                <i class="fab fa-github"></i>
+                View on GitHub
+            </a>
+            <a href="../index.html" class="project-btn">
+                <i class="fas fa-home"></i>
+                Back to Portfolio
+            </a>
+        </div>
+    </div>
+</body>
+</html>
